@@ -1,0 +1,25 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # Prometheus self-metrics
+  - job_name: prometheus
+    static_configs:
+      - targets: ['127.0.0.1:9090']
+
+  # vLLM server metrics (change the host/port if your vLLM listens elsewhere)
+  - job_name: vllm
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['127.0.0.1:8000']
+
+  # Node exporter (host OS metrics)
+  - job_name: node
+    static_configs:
+      - targets: ['127.0.0.1:9100']
+
+  # NVIDIA GPU metrics via DCGM exporter
+  - job_name: dcgm
+    static_configs:
+      - targets: ['127.0.0.1:9400']
