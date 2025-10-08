@@ -108,6 +108,11 @@ python -c "import torch, vllm, transformers, numpy; print('Environment ready')"
 
 ## Run DeepSeek Model with vLLM
 
+```
+# Tensor Parallel - Better for H200
+vllm serve deepseek-ai/DeepSeek-V3.2-Exp -tp 8
+```
+
 ```bash
 vllm serve deepseek-ai/DeepSeek-V3.2-Exp \
   -dp 8 \
@@ -209,6 +214,12 @@ Output:
 
 ---
 
+### Deploy the Prometheus Grafana Stack
+
+```
+docker compose up -d
+```
+
 ## Summary
 
 * Model: deepseek-ai/DeepSeek-V3.2-Exp
@@ -227,5 +238,3 @@ Output:
 * [LM-Eval Harness](https://github.com/EleutherAI/lm-evaluation-harness)
 
 
-Would you like me to add a brief introduction paragraph at the top (e.g., describing the purpose of the benchmark or comparison goal)? It can make it look more polished for GitHub readers.
-```
