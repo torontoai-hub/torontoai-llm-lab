@@ -1,0 +1,137 @@
+question,answer,category,prediction,latency,exact_match,response_length_ratio
+What is 13 + 29?,42,math,13 + 29 = 42,0.4666578769683838,0.0,6.0
+"If x + 5 = 12, what is x?",7,math,"To find the value of x, we need to isolate it on one side of the equation.
+
+We are given:
+
+x + 5 = 12
+
+Subtract 5 from both sides:
+
+x = 12 - 5
+x = 7
+
+So, the value of x is 7.",1.0621979236602783,0.0,174.0
+"Sort ascending: 9, 2, 11, 3.","2, 3, 9, 11",logic,"Here are the numbers in ascending order:
+
+1. 2
+2. 3
+3. 9
+4. 11
+
+Let me know if you have any other questions!",0.6764950752258301,0.0,9.818181818181818
+"Complete the sequence: 2, 4, 8, 16, __",32,logic,"The pattern of the sequence appears to be obtained by multiplying the previous term by 2.
+
+2 × 2 = 4
+4 × 2 = 8
+8 × 2 = 16
+16 × 2 = 32
+
+Therefore, the next number in the sequence would be: 32",1.0441930294036865,0.0,95.0
+Capital of Canada?,Ottawa,knowledge,The capital of Canada is Ottawa.,0.23749303817749023,0.0,5.333333333333333
+Who wrote 'Romeo and Juliet'?,William Shakespeare,knowledge,"The tragedy ""Romeo and Juliet"" was written by the English playwright William Shakespeare. It is believed to have been written between 1591 and 1595, although the exact date of composition is not known. The play is considered one of Shakespeare's greatest works and a timeless classic of literature.",1.0081238746643066,0.0,15.68421052631579
+What is the chemical symbol for gold?,Au,knowledge,The chemical symbol for gold is Au.,0.2517209053039551,0.0,17.5
+Which planet is known as the Red Planet?,Mars,knowledge,"Mars is commonly known as the ""Red Planet"" due to its reddish appearance, caused by iron oxide (or rust) in the planet's soil and rocks.",0.623898983001709,0.0,34.0
+Translate to French: 'apple',pomme,language,"The translation of ""apple"" to French is ""pomme"".",0.32376980781555176,0.0,9.6
+What is the plural of 'child'?,children,language,"The plural form of ""child"" depends on whether you're referring to more than one child in a general sense, or specifically to two young children.
+
+In a general sense, the plural form of ""child"" can be either:
+
+1. Children (used for multiple children of any age)
+Example: ""She has three children.""
+
+2. Kids (informal, used for younger children)
+Example: ""The kids are playing in the park.""
+
+3. Child(ren) without an article (when referring to two or more young children)
+Example: ""Two child(ren) are sitting on the couch.""
+
+However, when specifically referencing two young children, it's common to use the plural form with a possessive apostrophe, such as:
+
+1. Children
+2. Kids",2.4063539505004883,0.0,84.375
+Give an antonym for 'happy',sad,language,"Some possible antonyms of ""happy"" include:
+
+1. Sad
+2. Unhappily
+3. Miserable
+4. Depressed
+5. Gloomy
+
+These words convey a sense of emotional dissatisfaction or distress that is opposite to the positive feelings associated with happiness.
+
+Alternatively, you could also consider more nuanced antonyms, such as:
+
+* Melancholy (a feeling of sadness or pensiveness)
+* Despondent (feeling hopeless or discouraged)
+* Morose (having a sullen or glum disposition)
+
+These words capture a range of emotions that are distinct from simple happiness, but still convey a sense of emotional negativity.",2.0523760318756104,0.0,195.66666666666666
+Is this sentence in past tense: 'She will dance'?,no,language,"No, the sentence ""She will dance"" is in the future tense. The verb ""will dance"" indicates an action that is expected to happen at some point in the future.",0.6685502529144287,0.0,77.5
+Is water wet? Answer yes or no.,yes,common_sense,Yes.,0.16263294219970703,0.0,1.3333333333333333
+Can birds fly underwater? Answer yes or no.,no,common_sense,No.,0.16182398796081543,0.0,1.5
+Do you need an umbrella in the rain? Answer yes or no.,yes,common_sense,No.,0.1624457836151123,0.0,1.0
+Is fire cold? Answer yes or no.,no,common_sense,No.,0.16565608978271484,0.0,1.5
+What does this Python code print? print('Hello' + ' World'),Hello World,coding,"This Python code prints:
+
+```
+Hello World
+```
+
+The `+` operator is used for concatenation in Python, not string addition. This means that it combines the two strings into a single string without performing any mathematical operations on them. 
+
+It's worth noting that in Python 3.x, you can use the `str.join()` method or f-strings to achieve similar results:
+
+```python
+print('Hello'.join([' ' + 'World']))
+# or
+print(f'Hello {''} World')
+```
+
+However, the original code will still work as expected and print `'Hello World'`.",1.9375238418579102,0.0,47.81818181818182
+"In Python, what is the value of True and False?",False,coding,"In Python, `True` and `False` are boolean values.
+
+The value of `True` is equivalent to 1 in numerical operations and the value of `False` is equivalent to 0. This means that you can use them as numbers in mathematical expressions:
+
+```python
+print(1 == True)  # Output: True
+print(0 == False)  # Output: True
+```
+
+Additionally, boolean values are also used in conditional statements like if-else and for loops.
+
+Here's an example of using `True` and `False` in a simple if statement:
+
+```python
+x = True
+if x:
+    print(""x is true"")
+else:
+    print(""x is false"")
+
+# Output: x is true
+```
+
+In this example, the condition `x` is evaluated as `True`, so the code inside the `if` block runs.",2.783522844314575,0.0,137.6
+"What is the output of [1,2,3][1] in Python?",2,coding,"In Python, when you use square brackets `[]` to access an element from a list, it first looks for that index within the innermost set of brackets. In this case, `[1,2,3][1]`, it will look for the element at index 1 within the sub-list `[1,2,3]`.
+
+The output of `[1,2,3][1]` is `2`.",1.3790457248687744,0.0,281.0
+Say 'hello' three times with spaces between.,hello hello hello,instructions,"Hello 
+
+Hello 
+
+Hello",0.20820999145507812,0.0,1.2352941176470589
+Write 'cat' backwards.,tac,instructions,"The word ""cat"" spelled backwards is ""tac"".",0.31113290786743164,0.0,14.0
+Count from 1 to 3 using words.,one two three,instructions,"Here it goes:
+
+One
+Two
+Three",0.26336097717285156,0.0,2.1538461538461537
+How many words are in: 'The quick brown fox'?,4,analysis,"There are 4 words:
+
+1. The
+2. quick
+3. brown
+4. fox",0.4384942054748535,0.0,51.0
+Is this statement positive or negative: 'I love sunny days'?,positive,analysis,"This statement is positive. The word ""love"" in the context of enjoying a pleasant experience (sunny days) indicates a strong affection and appreciation for the subject, making the statement overall positive.",0.701469898223877,0.0,25.875
+What is the main emotion in: 'She cried with joy'?,joy,analysis,"The main emotion expressed in the phrase ""She cried with joy"" is happiness or elation. The act of crying is typically associated with sadness, but in this context, it's being used to convey that the person is so happy that they're overcome with emotion and tears are streaming down their face.",1.005223035812378,0.0,97.66666666666667

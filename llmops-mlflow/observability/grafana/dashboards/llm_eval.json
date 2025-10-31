@@ -1,0 +1,14 @@
+{
+  "title": "LLM Eval (MLflow)",
+  "panels": [
+    {
+      "type": "text",
+      "title": "Open MLflow UI",
+      "options": {
+        "content": "Open MLflow at http://localhost:5000 to explore runs and artifacts."
+      }
+    }
+  ],
+  "schemaVersion": 39,
+  "version": 1
+}

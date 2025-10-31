@@ -1,0 +1,114 @@
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: unless-stopped
+    ports: ["11434:11434"]
+    volumes:
+      - ollama_data:/root/.ollama
+    entrypoint: ["/bin/sh","-c","ollama serve & sleep 2 && ollama pull ${MODEL_NAME:-llama3.2} && tail -f /dev/null"]
+
+  llm-service:
+    build: ./app
+    container_name: llm-service
+    environment:
+      - OPENAI_BASE_URL=http://ollama:11434/v1
+      - OPENAI_API_KEY=ollama
+      - MODEL_NAME=${MODEL_NAME:-llama3.2}
+      - MODEL_TEMPERATURE=0.2
+      - OTLP_ENDPOINT=http://tempo:4318/v1/traces
+      - SERVICE_NAME=llm-service
+    depends_on: [ollama, tempo]
+    ports: ["8000:8000"]
+    logging:
+      driver: "json-file"
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    volumes:
+      - ./observability/prometheus.yml:/etc/prometheus/prometheus.yml
+    command: ["--config.file=/etc/prometheus/prometheus.yml","--storage.tsdb.retention.time=1d"]
+    ports: ["9090:9090"]
+
+  loki:
+    image: grafana/loki:2.9.8
+    container_name: loki
+    command: ["-config.file=/etc/loki/local-config.yaml"]
+    volumes:
+      - loki_data:/loki
+    ports: ["3100:3100"]
+
+  promtail:
+    image: grafana/promtail:2.9.8
+    container_name: promtail
+    volumes:
+      - ./observability/promtail-config.yml:/etc/promtail/config.yml
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: ["-config.file=/etc/promtail/config.yml"]
+    depends_on: [loki]
+
+  tempo:
+    image: grafana/tempo:2.5.0
+    container_name: tempo
+    command: ["-config.expand-env=true","-config.file=/etc/tempo.yaml"]
+    volumes:
+      - tempo_data:/var/tempo
+      - /etc/timezone:/etc/timezone:ro
+    ports:
+      - "3200:3200"
+      - "4318:4318"
+    environment:
+      - TZ=UTC
+    configs:
+      - source: tempo_config
+        target: /etc/tempo.yaml
+
+  grafana:
+    image: grafana/grafana:11.1.0
+    container_name: grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - ./observability/grafana/provisioning:/etc/grafana/provisioning
+      - ./observability/grafana/dashboards:/var/lib/grafana/dashboards
+    ports: ["3000:3000"]
+    depends_on: [prometheus, loki, tempo]
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:latest
+    container_name: mlflow
+    working_dir: /work
+    volumes:
+      - ./:/work
+    command: mlflow ui --backend-store-uri sqlite:///mlflow.db --port 5000 --host 0.0.0.0
+    ports: ["5000:5000"]
+
+volumes:
+  ollama_data:
+  loki_data:
+  tempo_data:
+
+configs:
+  tempo_config:
+    content: |
+      server:
+        http_listen_port: 3200
+      distributor:
+        receivers:
+          otlp:
+            protocols:
+              http:
+      storage:
+        trace:
+          backend: local
+          local:
+            path: /var/tempo/traces
+      metrics_generator:
+        registry:
+          external_labels:
+            source: tempo
+      overrides:
+        per_tenant_override_config: /etc/overrides.yaml

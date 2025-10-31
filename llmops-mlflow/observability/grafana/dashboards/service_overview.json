@@ -1,0 +1,33 @@
+{
+  "title": "Service Overview (LLM Workshop)",
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "Requests rate",
+      "targets": [
+        {
+          "expr": "sum by (route, code) (rate(app_requests_total[1m]))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          }
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Latency (p50/p90/p99)",
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.5, sum(rate(app_request_latency_seconds_bucket[5m])) by (le))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          }
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 39,
+  "version": 1
+}

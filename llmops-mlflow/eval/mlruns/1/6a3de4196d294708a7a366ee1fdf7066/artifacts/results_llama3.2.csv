@@ -1,0 +1,11 @@
+question,answer,category,prediction,latency,exact_match,response_length_ratio
+What is 13 + 29?,42,math,13 + 29 = 42.,0.45054006576538086,0.0,6.5
+Capital of Canada?,Ottawa,knowledge,The capital of Canada is Ottawa.,0.24657797813415527,0.0,5.333333333333333
+"Sort ascending: 9, 2, 11, 3.","2, 3, 9, 11",logic,"The sorted list in ascending order is:
+
+1. 2
+2. 3
+3. 9
+4. 11",0.5186350345611572,0.0,5.454545454545454
+Translate to French: 'apple',pomme,language,"The translation of ""apple"" to French is ""pomme"".",0.3237590789794922,0.0,9.6
+Is water wet? Answer yes or no.,yes,simple,Yes.,0.1585218906402588,0.0,1.3333333333333333

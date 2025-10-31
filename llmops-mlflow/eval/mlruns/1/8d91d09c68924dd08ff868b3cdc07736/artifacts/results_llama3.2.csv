@@ -1,0 +1,123 @@
+question,answer,category,prediction,latency,exact_match,response_length_ratio
+What is 13 + 29?,42,math,The answer to 13 + 29 is 42.,0.5357229709625244,0.0,14.0
+"If x + 5 = 12, what is x?",7,math,"To solve for x, we need to isolate the variable x.
+
+Given equation: x + 5 = 12
+
+Subtract 5 from both sides of the equation:
+
+x + 5 - 5 = 12 - 5
+x = 7
+
+So, the value of x is 7.",1.0700552463531494,0.0,175.0
+"Sort ascending: 9, 2, 11, 3.","2, 3, 9, 11",logic,"Here are the numbers in ascending order:
+
+1. 2
+2. 3
+3. 9
+4. 11",0.5274591445922852,0.0,5.636363636363637
+"Complete the sequence: 2, 4, 8, 16, __",32,logic,"The pattern appears to be a doubling of the previous term. Therefore, the next number in the sequence would be:
+
+32 (since 16 × 2 = 32)
+
+So, the completed sequence is: 2, 4, 8, 16, 32.",0.9639570713043213,0.0,92.0
+Capital of Canada?,Ottawa,knowledge,Ottawa is the capital of Canada.,0.26044416427612305,0.0,5.333333333333333
+Who wrote 'Romeo and Juliet'?,William Shakespeare,knowledge,"The authorship of 'Romeo and Juliet' is a topic of ongoing debate among scholars. While William Shakespeare is commonly credited with writing the play, there are some theories suggesting that it may have been written by another playwright or even an Italian poet named Arthur Brooke.
+
+However, most experts agree that the final version of 'Romeo and Juliet' was indeed written by William Shakespeare, who was active in London from around 1592 to 1613. The play is believed to have been written between 1591 and 1595, during the English Renaissance period.
+
+It's worth noting that some scholars argue that the story of Romeo and Juliet may have been inspired by a narrative poem called ""The Tragical History of Romeus and Juliet"" by Arthur Brooke, which was published in 1562. However, Shakespeare's version of the play is significantly different from Brooke's poem, with many unique elements, characters, and plot developments that are distinctive to Shakespeare's work.
+
+In any case, William Shakespeare is widely regarded as one of the greatest playwrights in history, and 'Romeo and Juliet' remains one of his most iconic and enduring works.",3.7063519954681396,0.0,60.21052631578947
+What is the chemical symbol for gold?,Au,knowledge,"The chemical symbol for gold is Au. It comes from the Latin word ""Aurum"".",0.39104485511779785,0.0,36.5
+Which planet is known as the Red Planet?,Mars,knowledge,"Mars is commonly known as the ""Red Planet"". This nickname comes from its reddish appearance, which is due to iron oxide (or rust) in the planet's soil.",0.6593222618103027,0.0,37.75
+Translate to French: 'apple',pomme,language,"The translation of ""apple"" to French is ""pomme"".",0.3214128017425537,0.0,9.6
+What is the plural of 'child'?,children,language,"The plural form of ""child"" can be a bit tricky. There are actually two commonly accepted options:
+
+1. Children
+2. Kids (informal) or Minors (more formal)
+
+In general, if you're referring to multiple children in a specific context or situation, the first option is usually the most suitable choice. However, if you're writing in an informal tone or addressing group of younger people, ""kids"" might be more appropriate.
+
+It's worth noting that some style guides, like the Chicago Manual of Style, recommend using ""children"" as the preferred plural form when referring to multiple young individuals, while others, like AP Stylebook, suggest ""kids"" for informal contexts. Ultimately, the choice depends on your context, tone, and intended audience.",2.4435670375823975,0.0,93.0
+Give an antonym for 'happy',sad,language,"A suitable antonym for ""happy"" is ""unhappy"".",0.323106050491333,0.0,14.666666666666666
+Is this sentence in past tense: 'She will dance'?,no,language,"No, the sentence ""She will dance"" is not in the past tense. It's actually in the future tense or more specifically, the conditional tense (also known as the modal verb tense). The auxiliary verb ""will"" indicates that the action of dancing is expected to happen at a later time.
+
+If you want to express the same idea in the past tense, you would need to rephrase it. For example:
+
+* ""She danced.""
+* ""She had danced.""
+
+Let me know if you have any other questions!",1.6831328868865967,0.0,230.5
+Is water wet? Answer yes or no.,yes,common_sense,Yes.,0.15872907638549805,0.0,1.3333333333333333
+Can birds fly underwater? Answer yes or no.,no,common_sense,No.,0.15758895874023438,0.0,1.5
+Do you need an umbrella in the rain? Answer yes or no.,yes,common_sense,Yes.,0.15899205207824707,0.0,1.3333333333333333
+Is fire cold? Answer yes or no.,no,common_sense,No.,0.15763187408447266,0.0,1.5
+What does this Python code print? print('Hello' + ' World'),Hello World,coding,"This Python code prints:
+
+'Hello World'
+
+The `+` operator in Python is used for string concatenation. So, when you concatenate two strings using the `+` operator, it returns a new string that is the result of combining the individual characters from each string.
+
+In this case, `'Hello'` and `' World'` are concatenated together to form the final output `'Hello World'`.",1.3234961032867432,0.0,33.63636363636363
+"In Python, what is the value of True and False?",False,coding,"In Python, `True` and `False` are boolean values. They have specific meanings:
+
+- `True`: represents a true condition or statement.
+- `False`: represents a false condition or statement.
+
+These booleans can be used in conditional statements (like if/else) to make decisions based on conditions.",1.0598390102386475,0.0,58.6
+"What is the output of [1,2,3][1] in Python?",2,coding,"In Python, when you use square brackets to access an element from a list (or any sequence), it works as follows:
+
+- If the index is within the valid range, it returns the corresponding element.
+
+However, if you try to use square brackets on a single value (like a list of length 1 or less), it will return the object itself. So in your case:
+
+```python
+my_list = [1,2,3]
+print(my_list[1]) # Outputs: 2
+```
+
+But if you do `my_list[1]` which is equivalent to `[my_list][1]`, it works slightly differently.
+
+In Python, when you use square brackets on an object that has a `__getitem__` method defined, like lists or tuples, the bracket notation `obj[index]` calls this method. 
+
+So if we define `my_list[0]` as a custom class with a `__getitem__` method:
+
+```python
+class CustomList:
+    def __init__(self, value):
+        self.value = value
+
+    def __getitem__(self, index):
+        print(f""Getting element at index {index}: {self.value}"")
+        return self.value
+
+my_list = CustomList(1)
+print(my_list[0]) # Outputs: Getting element at index 0: 1
+```
+
+However, if you define this as `[1]`, it will still work:
+
+```python
+custom_list_object = CustomList(1)
+print(custom_list_object[1]) # Outputs: Getting element at index 1: 1
+```
+
+But the correct way to access its first element is by using the `[]` notation on a list:
+
+```python
+my_list = [CustomList(1)]
+print(my_list[0].value) # Outputs: 1
+```",5.830507040023804,0.0,1399.0
+Say 'hello' three times with spaces between.,hello hello hello,instructions,"Hello
+
+Hello
+
+Hello",0.20293617248535156,0.0,1.1176470588235294
+Write 'cat' backwards.,tac,instructions,"The word ""cat"" spelled backwards is ""tac"".",0.3090238571166992,0.0,14.0
+Count from 1 to 3 using words.,one two three,instructions,"Here we go:
+
+One, Two, Three!",0.2747199535369873,0.0,2.230769230769231
+How many words are in: 'The quick brown fox'?,4,analysis,"There are 4 words in the phrase ""The quick brown fox"". However, it is worth noting that this phrase is actually a pangram, which means it uses all 26 letters of the alphabet at least once. It's often used as an example in typing and typing games because it is a well-known sentence that contains every letter of the alphabet.",1.1870989799499512,0.0,325.0
+Is this statement positive or negative: 'I love sunny days'?,positive,analysis,"The statement ""I love sunny days"" is positive. It expresses a feeling of affection and enjoyment towards something (sunny days), which is typically associated with a pleasant and uplifting experience.",0.6784579753875732,0.0,25.0
+What is the main emotion in: 'She cried with joy'?,joy,analysis,"The main emotion conveyed by the phrase ""'She cried with joy'"" is happiness, but more specifically, it's a strong emotional response to something pleasurable or satisfying. The use of ""cried"" instead of ""smiled"", ""laughed"", or ""cheered"" indicates that the emotion is intense and overwhelming, possibly even teary-eyed.",1.190657138824463,0.0,106.0

@@ -1,0 +1,227 @@
+[
+  {
+    "timestamp": "2025-10-30T23:52:37.478438",
+    "question": "What is 13 + 29?",
+    "expected_answer": "42",
+    "model_response": "13 + 29 = 42",
+    "category": "math",
+    "latency_seconds": 0.4666578769683838,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:38.541011",
+    "question": "If x + 5 = 12, what is x?",
+    "expected_answer": "7",
+    "model_response": "To find the value of x, we need to isolate it on one side of the equation.\n\nWe are given:\n\nx + 5 = 12\n\nSubtract 5 from both sides:\n\nx = 12 - 5\nx = 7\n\nSo, the value of x is 7.",
+    "category": "math",
+    "latency_seconds": 1.0621979236602783,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:39.217765",
+    "question": "Sort ascending: 9, 2, 11, 3.",
+    "expected_answer": "2, 3, 9, 11",
+    "model_response": "Here are the numbers in ascending order:\n\n1. 2\n2. 3\n3. 9\n4. 11\n\nLet me know if you have any other questions!",
+    "category": "logic",
+    "latency_seconds": 0.6764950752258301,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:40.262213",
+    "question": "Complete the sequence: 2, 4, 8, 16, __",
+    "expected_answer": "32",
+    "model_response": "The pattern of the sequence appears to be obtained by multiplying the previous term by 2.\n\n2 \u00d7 2 = 4\n4 \u00d7 2 = 8\n8 \u00d7 2 = 16\n16 \u00d7 2 = 32\n\nTherefore, the next number in the sequence would be: 32",
+    "category": "logic",
+    "latency_seconds": 1.0441930294036865,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:40.500306",
+    "question": "Capital of Canada?",
+    "expected_answer": "Ottawa",
+    "model_response": "The capital of Canada is Ottawa.",
+    "category": "knowledge",
+    "latency_seconds": 0.23749303817749023,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:41.508927",
+    "question": "Who wrote 'Romeo and Juliet'?",
+    "expected_answer": "William Shakespeare",
+    "model_response": "The tragedy \"Romeo and Juliet\" was written by the English playwright William Shakespeare. It is believed to have been written between 1591 and 1595, although the exact date of composition is not known. The play is considered one of Shakespeare's greatest works and a timeless classic of literature.",
+    "category": "knowledge",
+    "latency_seconds": 1.0081238746643066,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:41.761165",
+    "question": "What is the chemical symbol for gold?",
+    "expected_answer": "Au",
+    "model_response": "The chemical symbol for gold is Au.",
+    "category": "knowledge",
+    "latency_seconds": 0.2517209053039551,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:42.385684",
+    "question": "Which planet is known as the Red Planet?",
+    "expected_answer": "Mars",
+    "model_response": "Mars is commonly known as the \"Red Planet\" due to its reddish appearance, caused by iron oxide (or rust) in the planet's soil and rocks.",
+    "category": "knowledge",
+    "latency_seconds": 0.623898983001709,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:42.710069",
+    "question": "Translate to French: 'apple'",
+    "expected_answer": "pomme",
+    "model_response": "The translation of \"apple\" to French is \"pomme\".",
+    "category": "language",
+    "latency_seconds": 0.32376980781555176,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:45.116962",
+    "question": "What is the plural of 'child'?",
+    "expected_answer": "children",
+    "model_response": "The plural form of \"child\" depends on whether you're referring to more than one child in a general sense, or specifically to two young children.\n\nIn a general sense, the plural form of \"child\" can be either:\n\n1. Children (used for multiple children of any age)\nExample: \"She has three children.\"\n\n2. Kids (informal, used for younger children)\nExample: \"The kids are playing in the park.\"\n\n3. Child(ren) without an article (when referring to two or more young children)\nExample: \"Two child(ren) are sitting on the couch.\"\n\nHowever, when specifically referencing two young children, it's common to use the plural form with a possessive apostrophe, such as:\n\n1. Children\n2. Kids",
+    "category": "language",
+    "latency_seconds": 2.4063539505004883,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:47.169905",
+    "question": "Give an antonym for 'happy'",
+    "expected_answer": "sad",
+    "model_response": "Some possible antonyms of \"happy\" include:\n\n1. Sad\n2. Unhappily\n3. Miserable\n4. Depressed\n5. Gloomy\n\nThese words convey a sense of emotional dissatisfaction or distress that is opposite to the positive feelings associated with happiness.\n\nAlternatively, you could also consider more nuanced antonyms, such as:\n\n* Melancholy (a feeling of sadness or pensiveness)\n* Despondent (feeling hopeless or discouraged)\n* Morose (having a sullen or glum disposition)\n\nThese words capture a range of emotions that are distinct from simple happiness, but still convey a sense of emotional negativity.",
+    "category": "language",
+    "latency_seconds": 2.0523760318756104,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:47.838963",
+    "question": "Is this sentence in past tense: 'She will dance'?",
+    "expected_answer": "no",
+    "model_response": "No, the sentence \"She will dance\" is in the future tense. The verb \"will dance\" indicates an action that is expected to happen at some point in the future.",
+    "category": "language",
+    "latency_seconds": 0.6685502529144287,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:48.002119",
+    "question": "Is water wet? Answer yes or no.",
+    "expected_answer": "yes",
+    "model_response": "Yes.",
+    "category": "common_sense",
+    "latency_seconds": 0.16263294219970703,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:48.164320",
+    "question": "Can birds fly underwater? Answer yes or no.",
+    "expected_answer": "no",
+    "model_response": "No.",
+    "category": "common_sense",
+    "latency_seconds": 0.16182398796081543,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:48.327226",
+    "question": "Do you need an umbrella in the rain? Answer yes or no.",
+    "expected_answer": "yes",
+    "model_response": "No.",
+    "category": "common_sense",
+    "latency_seconds": 0.1624457836151123,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:48.493286",
+    "question": "Is fire cold? Answer yes or no.",
+    "expected_answer": "no",
+    "model_response": "No.",
+    "category": "common_sense",
+    "latency_seconds": 0.16565608978271484,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:50.431048",
+    "question": "What does this Python code print? print('Hello' + ' World')",
+    "expected_answer": "Hello World",
+    "model_response": "This Python code prints:\n\n```\nHello World\n```\n\nThe `+` operator is used for concatenation in Python, not string addition. This means that it combines the two strings into a single string without performing any mathematical operations on them. \n\nIt's worth noting that in Python 3.x, you can use the `str.join()` method or f-strings to achieve similar results:\n\n```python\nprint('Hello'.join([' ' + 'World']))\n# or\nprint(f'Hello {''} World')\n```\n\nHowever, the original code will still work as expected and print `'Hello World'`.",
+    "category": "coding",
+    "latency_seconds": 1.9375238418579102,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:53.214928",
+    "question": "In Python, what is the value of True and False?",
+    "expected_answer": "False",
+    "model_response": "In Python, `True` and `False` are boolean values.\n\nThe value of `True` is equivalent to 1 in numerical operations and the value of `False` is equivalent to 0. This means that you can use them as numbers in mathematical expressions:\n\n```python\nprint(1 == True)  # Output: True\nprint(0 == False)  # Output: True\n```\n\nAdditionally, boolean values are also used in conditional statements like if-else and for loops.\n\nHere's an example of using `True` and `False` in a simple if statement:\n\n```python\nx = True\nif x:\n    print(\"x is true\")\nelse:\n    print(\"x is false\")\n\n# Output: x is true\n```\n\nIn this example, the condition `x` is evaluated as `True`, so the code inside the `if` block runs.",
+    "category": "coding",
+    "latency_seconds": 2.783522844314575,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:54.594332",
+    "question": "What is the output of [1,2,3][1] in Python?",
+    "expected_answer": "2",
+    "model_response": "In Python, when you use square brackets `[]` to access an element from a list, it first looks for that index within the innermost set of brackets. In this case, `[1,2,3][1]`, it will look for the element at index 1 within the sub-list `[1,2,3]`.\n\nThe output of `[1,2,3][1]` is `2`.",
+    "category": "coding",
+    "latency_seconds": 1.3790457248687744,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:54.803048",
+    "question": "Say 'hello' three times with spaces between.",
+    "expected_answer": "hello hello hello",
+    "model_response": "Hello \n\nHello \n\nHello",
+    "category": "instructions",
+    "latency_seconds": 0.20820999145507812,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:55.114572",
+    "question": "Write 'cat' backwards.",
+    "expected_answer": "tac",
+    "model_response": "The word \"cat\" spelled backwards is \"tac\".",
+    "category": "instructions",
+    "latency_seconds": 0.31113290786743164,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:55.378459",
+    "question": "Count from 1 to 3 using words.",
+    "expected_answer": "one two three",
+    "model_response": "Here it goes:\n\nOne\nTwo\nThree",
+    "category": "instructions",
+    "latency_seconds": 0.26336097717285156,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:55.817532",
+    "question": "How many words are in: 'The quick brown fox'?",
+    "expected_answer": "4",
+    "model_response": "There are 4 words:\n\n1. The\n2. quick\n3. brown\n4. fox",
+    "category": "analysis",
+    "latency_seconds": 0.4384942054748535,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:56.519619",
+    "question": "Is this statement positive or negative: 'I love sunny days'?",
+    "expected_answer": "positive",
+    "model_response": "This statement is positive. The word \"love\" in the context of enjoying a pleasant experience (sunny days) indicates a strong affection and appreciation for the subject, making the statement overall positive.",
+    "category": "analysis",
+    "latency_seconds": 0.701469898223877,
+    "success": false
+  },
+  {
+    "timestamp": "2025-10-30T23:52:57.525346",
+    "question": "What is the main emotion in: 'She cried with joy'?",
+    "expected_answer": "joy",
+    "model_response": "The main emotion expressed in the phrase \"She cried with joy\" is happiness or elation. The act of crying is typically associated with sadness, but in this context, it's being used to convey that the person is so happy that they're overcome with emotion and tears are streaming down their face.",
+    "category": "analysis",
+    "latency_seconds": 1.005223035812378,
+    "success": false
+  }
+]

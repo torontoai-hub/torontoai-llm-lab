@@ -1,0 +1,121 @@
+question,answer,category,prediction,latency,exact_match,response_length_ratio
+What is 13 + 29?,42,math,13 + 29 = 42.,0.45795106887817383,0.0,6.5
+"If x + 5 = 12, what is x?",7,math,"To find the value of x, we need to isolate x on one side of the equation.
+
+x + 5 = 12
+
+Subtract 5 from both sides:
+
+x = 12 - 5
+x = 7
+
+So, the value of x is 7.",0.9850428104400635,0.0,158.0
+"Sort ascending: 9, 2, 11, 3.","2, 3, 9, 11",logic,"Here are the numbers sorted in ascending order:
+
+1. 2
+2. 3
+3. 9
+4. 11",0.5360472202301025,0.0,6.2727272727272725
+"Complete the sequence: 2, 4, 8, 16, __",32,logic,"The pattern appears to be a doubling of the previous term.
+
+2 × 2 = 4
+4 × 2 = 8
+8 × 2 = 16
+16 × 2 = 32
+
+So, the next number in the sequence would be: 32.",0.977107048034668,0.0,76.5
+Capital of Canada?,Ottawa,knowledge,The capital of Canada is Ottawa.,0.23879408836364746,0.0,5.333333333333333
+Who wrote 'Romeo and Juliet'?,William Shakespeare,knowledge,"The authorship of ""Romeo and Juliet"" is traditionally attributed to William Shakespeare. However, there is ongoing debate among scholars about the extent to which other writers may have contributed to the play.
+
+Most scholars believe that Shakespeare wrote the final version of the play, but some argue that he may have drawn from earlier sources or collaborated with others on the work. The exact origins and authorship of ""Romeo and Juliet"" are still a subject of study and debate among literary historians and scholars.",1.5874860286712646,0.0,27.473684210526315
+What is the chemical symbol for gold?,Au,knowledge,The chemical symbol for gold is Au.,0.24813199043273926,0.0,17.5
+Which planet is known as the Red Planet?,Mars,knowledge,"Mars is commonly referred to as the ""Red Planet"" due to its reddish appearance, which is caused by iron oxide (or rust) in the planet's soil and rocks.",0.6782200336456299,0.0,37.75
+Translate to French: 'apple',pomme,language,"The translation of ""apple"" to French is ""pomme"".",0.32559895515441895,0.0,9.6
+What is the plural of 'child'?,children,language,"The plural form of ""child"" can be used in different ways, depending on the context:
+
+1. In most cases, when referring to multiple children, the plural form is simply ""children"". (e.g., ""I have three children."")
+2. When referring to a group of people who are considered to be like children, such as students or young adults, the plural form can be ""children"" (e.g., ""The university is full of children"").
+3. In some cases, especially when referring to specific individuals, the word ""child"" itself can remain in the singular form, with no change in spelling. (e.g., ""My child is coming over for dinner."")
+
+However, it's worth noting that in British English, the preferred plural form is often ""children"", while in American English, both forms (""children"" and ""childs"") are commonly used.
+
+So, to summarize: when referring to multiple children or groups of people considered like children, use ""children"".",3.1014931201934814,0.0,112.875
+Give an antonym for 'happy',sad,language,"An antonym for ""happy"" is often considered to be ""unhappy"".",0.36751484870910645,0.0,19.666666666666668
+Is this sentence in past tense: 'She will dance'?,no,language,"No, the sentence ""She will dance"" is in the future tense. The use of the verb ""will"" indicates that the action is going to happen in the future, rather than having happened in the past.",0.8388111591339111,0.0,92.5
+Is water wet? Answer yes or no.,yes,common_sense,Yes.,0.17123794555664062,0.0,1.3333333333333333
+Can birds fly underwater? Answer yes or no.,no,common_sense,No.,0.18002080917358398,0.0,1.5
+Do you need an umbrella in the rain? Answer yes or no.,yes,common_sense,Yes.,0.18748092651367188,0.0,1.3333333333333333
+Is fire cold? Answer yes or no.,no,common_sense,No.,0.17058682441711426,0.0,1.5
+What does this Python code print? print('Hello' + ' World'),Hello World,coding,"This Python code prints:
+
+'HeloWorld'
+
+Explanation:
+In Python, when you use the `+` operator to concatenate two strings, it doesn't automatically insert a space between them. This is because the default behavior for string concatenation in Python is to perform an ""atomic"" operation, which means that all the characters are concatenated together without any separation.
+
+To print 'Hello World', you would need to use string formatting or concatenation with spaces, like this:
+
+```python
+print('Hello ' + 'World')
+```
+
+or
+
+```python
+print('Hello' + ' World')
+```",2.0620479583740234,0.0,51.0
+"In Python, what is the value of True and False?",False,coding,"In Python, the values of `True` and `False` are as follows:
+
+- `True` is equivalent to the boolean value ""true"" in other languages
+- `False` is equivalent to the boolean value ""false"" in other languages
+
+However, internally, Python stores these values as integers.
+
+- `True` is stored as 1
+- `False` is stored as 0
+
+This means that you can use the `int()` function to convert a boolean value into an integer:
+
+```python
+print(int(True))  # Outputs: 1
+print(int(False))  # Outputs: 0
+```
+
+Also, note that in Python, you cannot directly assign an integer value of 0 or 1 to a boolean variable. You need to use the boolean functions `bool()` or the logical operators `==` and `!=`, as shown below:
+
+```python
+# Not allowed
+x = 0
+
+# Allows conversion of integers into booleans
+y = bool(0)
+print(y)  # Outputs: False
+
+z = True
+print(int(z))  # Outputs: 1
+```
+
+The use of the boolean functions `bool()` and the logical operators `==` and `!=` are generally recommended over direct assignment to avoid potential issues.",4.309241056442261,0.0,202.4
+"What is the output of [1,2,3][1] in Python?",2,coding,"In Python, when you use square brackets to index a list, it returns the value at that index.
+
+So, if we have a list `my_list = [1, 2, 3]` and we do `[my_list[1]]`, the output would be `2`.
+
+However, in your question, you have written `[1,2,3][1]`. This is incorrect syntax. The correct way to write this would be `[1,2,3][1] = [1,2,3][1]` or simply `my_list[1]`.
+
+If we do `[1, 2, 3][1]`, Python will throw a `TypeError` because you can't use the square brackets on a list like that.
+
+So, to answer your question, if you meant to write it as `[1,2,3][1] = [1,2,3][1]`, the output would be `2`.",3.1952688694000244,0.0,593.0
+Say 'hello' three times with spaces between.,hello hello hello,instructions,"Hello 
+
+Hello 
+
+Hello",0.22243475914001465,0.0,1.2352941176470589
+Write 'cat' backwards.,tac,instructions,"The word ""cat"" spelled backwards is ""tac"".",0.32797789573669434,0.0,14.0
+Count from 1 to 3 using words.,one two three,instructions,"Here it goes:
+
+One
+Two
+Three",0.2582118511199951,0.0,2.1538461538461537
+How many words are in: 'The quick brown fox'?,4,analysis,"There are 4 words in the phrase ""The quick brown fox"".",0.35746097564697266,0.0,54.0
+Is this statement positive or negative: 'I love sunny days'?,positive,analysis,"The statement ""I love sunny days"" is a positive statement. The use of the word ""love"" and the association with pleasant weather suggests that the speaker has a strong affection for sunny days.",0.7175233364105225,0.0,24.0
+What is the main emotion in: 'She cried with joy'?,joy,analysis,"The main emotion expressed in the phrase ""She cried with joy"" is happiness or euphoria. The use of the word ""joy"" explicitly conveys a positive emotional state, and the fact that she is crying suggests that her emotions are intense and overwhelming.",0.8968219757080078,0.0,83.0

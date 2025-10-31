@@ -1,0 +1,16 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint Dockerfile
+        run: docker run --rm -i hadolint/hadolint < app/Dockerfile || true
+      - name: Build app image
+        run: docker build -t llm-service:ci ./app
+      - name: Python sanity
+        uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install -r app/requirements.txt
+      - run: python -c "import fastapi, openai; print('OK')"

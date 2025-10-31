@@ -1,0 +1,10 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+prometheus-client==0.21.0
+opentelemetry-sdk==1.27.0
+opentelemetry-instrumentation-fastapi==0.48b0
+opentelemetry-instrumentation-requests==0.48b0
+opentelemetry-exporter-otlp==1.27.0
+openai==1.51.2
+python-dotenv==1.0.1
+requests==2.32.3
