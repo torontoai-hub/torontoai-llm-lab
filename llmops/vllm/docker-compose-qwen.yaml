@@ -1,0 +1,18 @@
+
+services:
+  vllm:
+    image: vllm/vllm-openai:latest
+    container_name: vllm
+    runtime: nvidia
+    ports:
+      - "8000:8000"
+    ipc: host
+    environment:
+      HF_TOKEN: ${HF_TOKEN}
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility
+    volumes:
+      - ${HOME}/.cache/huggingface:/root/.cache/huggingface
+    command:
+      - --model
+      - Qwen/Qwen3-0.6B
