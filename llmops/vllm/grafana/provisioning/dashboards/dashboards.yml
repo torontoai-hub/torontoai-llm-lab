@@ -1,0 +1,11 @@
+apiVersion: 1
+
+providers:
+  - name: "vllm-dashboards"
+    folder: "LLMOps"
+    type: file
+    disableDeletion: false
+    editable: true
+    updateIntervalSeconds: 30
+    options:
+      path: /etc/grafana/dashboards
