@@ -4,6 +4,8 @@ services:
     image: vllm/vllm-openai:latest
     container_name: vllm
     runtime: nvidia
+    networks:
+      - llmops-net
     ports:
       - "8000:8000"
     ipc: host
@@ -16,3 +18,8 @@ services:
     command:
       - --model
       - Qwen/Qwen3-0.6B
+
+networks:
+  llmops-net:
+    external: true
+    name: llmops-net

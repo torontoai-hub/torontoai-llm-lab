@@ -1,0 +1,91 @@
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    networks:
+      - llmops-net
+    ports:
+      - "9090:9090"   # accessible from outside
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      # optional but handy when you run lots of exporters
+      - --web.enable-lifecycle
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    networks:
+      - llmops-net
+    ports:
+      - "3000:3000"   # accessible from outside
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/etc/grafana/dashboards:ro
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+
+  dcgm-exporter:
+    image: nvidia/dcgm-exporter:latest
+    container_name: dcgm-exporter
+    networks:
+      - llmops-net
+    restart: unless-stopped
+    # GPU access
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    # Mount metrics CSV / dcgm data dir (keep what you had)
+    volumes:
+      - /var/lib/dcgm:/var/lib/dcgm
+    ports:
+      - "9400:9400"   # accessible from outside (optional)
+
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    networks:
+      - llmops-net
+    restart: unless-stopped
+    pid: host
+    ports:
+      - "9100:9100"   # accessible from outside (optional)
+    command:
+      - --path.rootfs=/host
+    volumes:
+      - /:/host:ro,rslave
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest
+    container_name: cadvisor
+    networks:
+      - llmops-net
+    restart: unless-stopped
+    ports:
+      - "8080:8080"   # accessible from outside (optional)
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+
+volumes:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  llmops-net:
+    name: llmops-net
+    driver: bridge
+    external: true
